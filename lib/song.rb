@@ -40,6 +40,11 @@ class Song
   end
 
   def self.new_from_filename(file)
+    song = self.new
+    file = file.split(' - ')
+    song.artist_name = file[0]
+    song.name = file[1].delete('.mp3')
+  end
 
   def save
     self.class.all << self
