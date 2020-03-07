@@ -44,6 +44,7 @@ class Song
     file = file.split(' - ')
     song.artist_name = file[0]
     song.name = file[1].delete('.mp3')
+    song
   end
 
   def save
