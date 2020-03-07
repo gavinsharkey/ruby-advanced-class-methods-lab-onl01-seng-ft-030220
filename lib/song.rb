@@ -44,7 +44,7 @@ class Song
     file = file.split(' - ')
 
     song.artist_name = file[0]
-    song.name = file[1].delete('.mp3')
+    song.name = file[1].delete_suffix('.mp3')
 
     song
   end
@@ -54,7 +54,7 @@ class Song
     file = file.split(' - ')
 
     song.artist_name = file[0]
-    song.name = file[1].delete('.mp3')
+    song.name = file[1].delete_suffix('.mp3')
 
     self.all << song
     song
